@@ -72,6 +72,7 @@
 > This is a first blockquote.
 >
 > This is a second blockquote.
+>
 > This is a third blockquote.
 
 ---
@@ -107,24 +108,31 @@
 ### 순서가 없는 목록 (`*` / `+` / `-` /)
 
 ```
-+ 프론트엔드
-  + HTML
-  + CSS
-  + JavaScript
-- 백엔드
-  - Node.js
-  - Python
-  - Java
++ 액션
+  + 마블
+    + 어벤져스
+    + 아이언맨
+  - DC
+    - 배트맨
+    - 수어사이드 스쿼드
+- 드라마
+  - 역사 드라마
+    - 왕좌의 게임
+    - 바벨
+  - 현실 드라마
+    - 더 크라운
+    - 스트레인저 씽스
 ```
 
 - 액션
   - 마블
     - 어벤져스
     - 아이언맨
-  - DC
+  * DC
     - 배트맨
     - 수어사이드 스쿼드
-- 드라마
+
+* 드라마
   - 역사 드라마
     - 왕좌의 게임
     - 바벨
@@ -137,13 +145,11 @@
 ### 들여쓰기
 
 ```
-1. 숫자 더하기
-간단한 숫자 더하기 예시입니다:
+I am a boy
 
-    result = 2 + 3
-    print(result)
+    I like pizza and chicken
 
-결과는 5입니다.
+see you tomorrow
 
 ```
 
@@ -285,4 +291,3 @@ _banana_
 ### 마무리
 
 - 마크다운을 사용법을 친숙하게 만들어 손쉽게 작성할 수 있도록 앞으로 많이 사용 할 것이다.또한 마크다운을 이용해 Github, 블로그 등 많이 사용하여 더욱 효율적이고 깔끔하게 콘텐츠를 작성해 나갈것이다.
-  [참고 출처](URL "https://gist.github.com/ihoneymon/652be052a0727ad59601")
