@@ -142,7 +142,7 @@ body {
     display: inline-block;
     inline-size: 1.5rem;
     block-size: 1.5rem;
-    background: url("/src/login/images/uncheckbox.svg") no-repeat center;
+    background: url("../images/uncheckbox.svg") no-repeat center;
     position: relative;
     top: 15px;
     right: 10px;
@@ -150,7 +150,7 @@ body {
 
   /* 체크된 상태에서 이미지 변경 */
   .state-off:checked + .checkbox-label {
-    background: url("/src/login/images/checkbox.svg") no-repeat center;
+    background: url("../images/checkbox.svg") no-repeat center;
   }
 }
 
@@ -169,12 +169,12 @@ body {
   position: relative;
 
   &:focus::after {
-    background: url(/src/login/images/on.svg) no-repeat;
+    background: url(../images/on.svg) no-repeat;
   }
 
   &::after {
     content: "";
-    background: url(/src/login/images/off.svg) no-repeat;
+    background: url(../images/off.svg) no-repeat;
     display: inline-block;
     width: 50px;
     height: 30px;
