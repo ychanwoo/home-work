@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="preload"
+      as="font"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT@2/fonts/static/woff2/SUIT.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/login/styles/login.css" />
+    <title>네이버 로그인</title>
+  </head>
+  <body>
+    <div class="naverLogin">
+      <header>
+        <img src="./images/logo.svg" alt="네이버 헤더 로고" class="logoImg" />
+      </header>
+      <form>
+        <div class="idBox">
+          <input
+            type="id"
+            name="userId"
+            id="userId"
+            class="userId"
+            placeholder="아이디(이메일)"
+            required
+          />
+          <label for="userId"></label>
+          <p class="idError">아이디는 이메일을 입력해 주세요</p>
+        </div>
+        <div class="pwdBox">
+          <input
+            type="password"
+            name="userPwd"
+            id="userPwd"
+            class="userId"
+            placeholder="비밀번호"
+            minlength="10"
+            required
+          />
+          <label for="userPwd"></label>
+          <p class="pwdError">비밀번호는 10자리 이상 입력해 주세요</p>
+        </div>
+
+        <div>
+          <button class="btn-login">로그인</button>
+        </div>
+
+        <div class="loginState">
+          <input type="checkbox" id="state-off" class="state-off" />
+          <label for="state-off" class="checkbox-label"></label>
+          <p>로그인 상태 유지</p>
+        </div>
+
+        <div class="ipBox">
+          <a
+            class="ipLink"
+            href="./pages/ip_security.html"
+            tabindex="0"
+            target="_blank"
+            >IP 보안</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

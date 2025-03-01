@@ -77,9 +77,36 @@
       
       ul.avatars{
         margin-right: 16px;
+        position: relative;
+        left: 2px;
       }
 
       .avatars a{
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      .homework-links:hover{
+        color: #007bff;
+      }
+
+      .login{
+        list-style: none;
+        display: flex;
+        justify-content:center;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+      }
+      
+      ul.login{
+        margin-right: 16px;
+        position: relative;
+        left: 10px;
+      }
+
+      .login a{
         color: #555;
         text-decoration: none;
         transition: color 0.3s ease;
@@ -115,7 +142,11 @@
       </ul>
       <ul class="avatars">
         <li><a href="./src/avatars/avatars.html">아바타 이미지</a></li>
-        <li><a href="./src/avatars/avatars.md">3주차 회고</a></li>
+        <li><a href="./src/avatars/avatars.md">아바타 회고</a></li>
+      </ul>
+      <ul class="login">
+        <li><a href="./src/login/login.html">네이버 로그인</a></li>
+        <li><a href="./src/login/login.md">로그인 회고</a></li>
       </ul>
     </div>
   </body>

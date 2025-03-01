@@ -1,0 +1,189 @@
+body {
+  color: #121212;
+  font-size: 1rem;
+}
+
+.naverLogin {
+  /* border: 1px solid black; */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+  }
+}
+
+/* 로고 이미지 */
+.logoImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 230px;
+  margin-bottom: 50px;
+
+  @media (min-width: 768px) {
+    width: 230px;
+    margin-bottom: 20px;
+  }
+}
+
+/* 아이디 비번 입력창 */
+.userId:focus, .userPwd:focus {
+  outline: none;
+  background: #d0e6f8;
+  border: 2px solid #03cf5d;
+}
+
+.userId,
+.userPwd {
+  inline-size: 450px;
+  block-size: 48px;
+  &:focus {
+    background: #d0e6f8;
+    /* border-color: #03cf5d; */
+  }
+
+  @media (min-width: 768px) {
+    width: 500px;
+    height: 50px;
+  }
+}
+
+ 
+
+
+/* 에러 메시지 띄우기 */
+.idBox{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+
+  .idError{
+    display: none;
+    color: red;
+    font-size: .75rem;
+    position: absolute;
+    top: 45px;
+  }
+
+  #userId:focus ~ .idError{
+    display: block;
+  }
+
+  #userId:valid ~ .idError{
+    display: none;
+  }
+}/* 여기서 ~은 id가 userId인 요소 뒤에 나오는 p태그를 선택함 */
+
+.pwdBox{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 2rem;
+
+  .pwdError{
+    display: none;
+    color: red;
+    font-size: .75rem;
+    position: absolute;
+    top: 45px;
+  }
+
+  #userPwd:focus ~ .pwdError{
+    display: block;
+  }
+
+  #userPwd:valid ~ .pwdError{
+    display: none;
+  }
+}
+
+/* 로그인 버튼 */
+.btn-login {
+  background: #03cf5d;
+  border: none;
+  color: #fff;
+  inline-size: 28.75rem;
+  block-size: 3.5rem;
+
+  &:active {
+    background: #999999;
+    border: none;
+    color: #fff;
+  }
+
+  @media (min-width: 768px) {
+    width: 510px;
+    height: 60px;
+  }
+}
+
+.loginState {
+  width: 200px;
+  display: flex;
+  position: relative;
+  right: 10px;
+
+  .state-off {
+    visibility: hidden;
+  }
+
+  .checkbox-label {
+    display: inline-block;
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    background: url("/src/login/images/uncheckbox.svg") no-repeat center;
+    position: relative;
+    top: 15px;
+    right: 10px;
+  }
+
+  /* 체크된 상태에서 이미지 변경 */
+  .state-off:checked + .checkbox-label {
+    background: url("/src/login/images/checkbox.svg") no-repeat center;
+  }
+}
+
+/* IP 보안 */
+.ipBox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 37px;
+  left: 370px;
+}
+
+.ipLink {
+  text-decoration: none;
+  color: #121212;
+  position: relative;
+
+  &:focus::after {
+    background: url(/src/login/images/on.svg) no-repeat;
+  }
+
+  &::after {
+    content: "";
+    background: url(/src/login/images/off.svg) no-repeat;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    left: 60px;
+  }
+
+  @media (min-width: 768px) {
+    left: 50px;
+  }
+}
