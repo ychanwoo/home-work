@@ -1,0 +1,499 @@
+@import "./card-component.css";
+
+/* 카드 레이아웃 */
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 10px 0 10px;
+  gap: 10px;
+}
+
+/* ipad Pro */
+.ipadPro {
+  background: url('../products/ipad_pro_wide.jpeg') no-repeat center/cover;
+  height: 500px;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+  grid-area: 1/1/2/3;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    background: url('../products/ipad_pro.jpeg') no-repeat center/cover;
+
+    .productContent{
+      max-width: 12.5rem;
+      text-align: center;
+      /* 단어 단위로 줄 바꿈 */
+      word-break: keep-all; 
+    }
+  }
+
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/ipad_pro_wide_2x.jpeg') no-repeat center/cover;
+  }
+  
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  
+  .ipadPro-btn{
+    position: relative;
+    right: 5px;
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--blue-200);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--blue-200);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--blue-200);
+    background: none;
+  }
+}
+
+  /* ipad air */
+.ipadAir{
+  background: url('../products/ipad_air_wide.jpeg') no-repeat center/cover;
+  height: 500px;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+  grid-area: 2/1/3/3;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    background: url('../products/ipad_air.jpeg') no-repeat center/cover;
+    .productContent{
+      max-width: 12.5rem;
+      text-align: center;
+      /* 단어 단위로 줄 바꿈 */
+      word-break: keep-all; 
+    }
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/ipad_air_wide_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .ipadPro-btn{
+    position: relative;
+    right: 5px;
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--black);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--bla);
+    background: none;
+  }
+}
+
+/* iPhone 15 Pro */
+.iphone15Pro{
+  background: url('../products/iphone15_pro_wide.jpeg') no-repeat center/cover;
+  height: 500px;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+  grid-area: 3/1/4/3;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    background: url('../products/iphone15_pro.jpeg') no-repeat center/cover;
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/iphone15_pro_wide_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      margin-right: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .iPhone15Pro-btn{
+    position: relative;
+    right: var(--small-spacing);
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--blue-200);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--blue-200);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--blue-200);
+    background: none;
+  }
+}
+
+/* iPhone 15 */
+.iphone15{
+  background: url('../products/iphone15.jpeg') no-repeat center/cover;
+  height: 31.25rem;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+  grid-area: 4/1/5/2;
+
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    grid-area: 4/1/5/3;
+    .productContent{
+      max-width: 7.5rem;
+      text-align: center;
+      /* 텍스트 줄 바꿈 */
+      white-space: pre-line;
+    }
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/iphone15_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      margin-right: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .iPhone15-btn{
+    position: relative;
+    right: var(--small-spacing);
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--black);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--bla);
+    background: none;
+  }
+}
+
+/* WATCH */
+.watch{
+  background: url('../products/apple_watch.jpeg') no-repeat center/cover;
+  height: 500px;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    grid-area: 5/1/6/3;
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/iphone15_pro_wide_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      margin-right: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .watch-btn{
+    position: relative;
+    right: var(--small-spacing);
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--blue-200);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--blue-200);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--blue-200);
+    background: none;
+  }
+}
+
+/* MacBook Air */
+.macBookAir{
+  background: url('../products/macbook_air.jpeg') no-repeat center/cover;
+  height: 31.25rem;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    grid-area: 6/1/7/3;
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/macbook_air_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--black);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      margin-right: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .macBookAir-btn{
+    position: relative;
+    right: var(--small-spacing);
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--black);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--black);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--bla);
+    background: none;
+  }
+}
+
+/* airPods Pro */
+.airPodsPro{
+  background: url('../products/airpods_pro.jpeg') no-repeat center/cover;
+  height: 500px;
+  place-items: center;
+  border-radius: 0.5rem;
+  padding: 10px;
+
+  /* 화면이 1024px 이하일 때 */
+  @media (max-width: 1024px) {
+    grid-area: 7/1/8/3;
+    .productContent{
+      max-width: 10rem;
+      text-align: center;
+      /* 텍스트 줄바꿈 */
+      white-space: pre-line;
+    }
+    
+  }
+  /* 고해상도 이미지*/
+  @media (-webkit-min-device-pixel-ratio: 2){
+    background: url('../products/airpods_pro_2x.jpeg') no-repeat center/cover;
+  }
+  .content {
+    position: relative;
+    top: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    padding: var(--small-spacing);
+    border-radius: 0.5rem;
+    .productName {
+      font-size: var(--extra-large-text);
+      font-weight: 700;
+      margin-bottom: var(--x-small-spacing);
+    }
+    .productContent {
+      font-size: var(--base-text);
+      margin-bottom: var(--x-small-spacing);
+    }
+    .openDate {
+      font-size: var(--small-text);
+      margin-bottom: var(--x-small-spacing);
+      margin-right: var(--x-small-spacing);
+      color: #86868B;
+    }
+  }
+  .airPodsPro-btn{
+    position: relative;
+    right: var(--small-spacing);
+  }
+  .btn1 {
+    border: none;
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--white);
+    background: var(--blue-200);
+    margin: var(--x-small-spacing);
+  }
+  .btn2 {
+    border: 1px solid var(--blue-200);
+    border-radius: 20px;
+    height: 25px;
+    font-size: var(--xx-small-text);
+    color: var(--blue-200);
+    background: none;
+  }
+}
